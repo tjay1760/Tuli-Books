@@ -1,12 +1,15 @@
 import React from 'react'
 import Chart1 from '../assets/images/chart-1.png'
 import Chart2 from '../assets/images/chart-2.png'
+import Chart3 from '../assets/images/chart-3.png'
+import Chart4 from '../assets/images/chart-4.png'
 import invoicingIcon from '../assets/images/invoicing-icon.png'
 import taxationIcon from '../assets/images/taxation-icon.png'
 import bookkeepingIcon from '../assets/images/bookkeeping-icon.png'
 import salesIcon from '../assets/images/sales-icon.png'
 import inventoryIcon from '../assets/images/inventory-icon.png'
 import reportsIcon from '../assets/images/reports-icon.png'
+import shieldIcon from '../assets/images/shield-icon.png'
 
 
 const FeatureCard = ({ title, description, icon, bg }) => (
@@ -73,6 +76,18 @@ bg = "#D6D2FF"
         </div>
                <div className="chart mx-auto">
           <img src={Chart2} alt="Chart 2" className=''/>
+        </div>
+        <div className="chart mx-auto">
+          <img src={Chart3} alt="Chart 3" className=''/>
+        </div>
+        <div className="service text-[#0066FF] mx-auto">
+          <h1 className='text-4xl font-bold mb-10'>Explore our Features</h1>
+          <ul className='list-disc space-y-6 text-xl'>
+            <li className='flex gap-6 items-center'><img src={shieldIcon} alt="AI Powered Smart Bookkeeping" className="h-10" />AI Powered Smart Bookkeeping</li>
+            <li className='flex gap-6 items-center'><img src={shieldIcon} alt="Experience the ultimate in financial security" className="h-10" />Experience the ultimate in financial security</li>
+            <li className='flex gap-6 items-center'><img src={shieldIcon} alt="Advanced Real-Time Financial Reporting" className="h-10" />Advanced Real-Time Financial Reporting</li>
+            <li className='flex gap-6 items-center'><img src={shieldIcon} alt="Save your time and reduce financial anxiety" className="h-10" />Save your time and reduce financial anxiety</li>
+          </ul>
         </div>
       </div>
     </div>

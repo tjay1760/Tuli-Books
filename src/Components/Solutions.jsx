@@ -77,8 +77,9 @@ bg = "#D6D2FF"
                <div className="chart mx-auto">
           <img src={Chart2} alt="Chart 2" className=''/>
         </div>
-        <div className="chart mx-auto">
+        <div className="chart chart-4 mx-auto relative">
           <img src={Chart3} alt="Chart 3" className=''/>
+          <img src={Chart4} alt="Chart 4" className='absolute left-72 top-80'/>
         </div>
         <div className="service text-[#0066FF] mx-auto">
           <h1 className='text-4xl font-bold mb-10'>Explore our Features</h1>

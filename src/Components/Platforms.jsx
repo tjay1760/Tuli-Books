@@ -47,13 +47,13 @@ const Platforms = () => {
         <div class="main-grid grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
             <div class="flex flex-col items-start text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4 leading-tight">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-[#0957FF] mb-4 leading-tight">
                     All Our Connected Platforms
                 </h1>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                     These business tools and many more to come, work well with Tuli Books
                 </p>
-                <button class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+                <button class="bg-[#0957FF] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
                     Explore integration
                 </button>
             </div>

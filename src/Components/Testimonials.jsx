@@ -1,8 +1,11 @@
-import React from 'react'
-import sartifyLogo from '../assets/images/sartify-logo.png'
-import pawaaiLogo from '../assets/images/pawa-ai-logo.png'
-import dociproLogo from '../assets/images/docipro-logo.png'
-import tutorAilogo from '../assets/images/tutor-ai-logo.png'
+import React, { useEffect } from 'react';
+import { motion } from 'motion/react';
+
+import sartifyLogo from '../assets/images/sartify-logo.png';
+import pawaaiLogo from '../assets/images/pawa-ai-logo.png';
+import dociproLogo from '../assets/images/docipro-logo.png';
+import tutorAilogo from '../assets/images/tutor-ai-logo.png';
+
 
 const testimonials = [
   {
@@ -16,8 +19,21 @@ const testimonials = [
     company: "Sartify Co Ltd",
     companyLogo: sartifyLogo,
     feedback: "As a small business owner, Tuli Books has been a game-changer. The seamless integration with other platforms makes managing our finances effortless."
+  },
+  {
+    name: "Alex",
+    company: "DociPro",
+    companyLogo: dociproLogo,
+    feedback: "Tuli Books has transformed our accounting processes with its efficient and accurate features. It's a must-have for any modern business."
+  },
+  {
+    name: "Jane Smith",
+    company: "Tutor AI",
+    companyLogo: tutorAilogo,
+    feedback: "The automation and reporting tools in Tuli Books are top-notch. It has streamlined our financial management and provided valuable insights."
   }
-]
+];
+
 const TestimonialCard = ({ name, company, companyLogo, feedback }) => (
   <div className="testimonial-card border p-6 rounded-lg shadow-lg bg-[#071D6E] text-white max-w-md flex flex-col justify-between">
     <div>
@@ -34,9 +50,11 @@ const TestimonialCard = ({ name, company, companyLogo, feedback }) => (
 );
 
 const Testimonials = () => {
+
+
   return (
     <div className='mt-20 mb-20 px-10'>
-      <h1 className='text-center text-6xl font-bold my-8 text-[#0066FF]'>Trusted by thousands of startups,  small <br/> businesses and accounting firms </h1>
+      <h1 className='text-center text-6xl font-bold my-8 text-[#0066FF]'>Trusted by thousands of startups, small <br/> businesses and accounting firms </h1>
       <div className="supported-companies px-6 mx-auto">
         <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
         <div className="logos flex items-center justify-between mb-10 w-5/6 mx-auto">
@@ -46,16 +64,40 @@ const Testimonials = () => {
           <img src={tutorAilogo} alt="Tutor AI Logo" className="h-36 mx-4" />
         </div>
         <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
+      </div>
+<div className="relative w-5/6 mx-auto mt-20 overflow-hidden">
+  {/* Left fade */}
+  <div className="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white via-blue-100 to-transparent z-10" />
 
+  {/* Right fade */}
+  <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white via-blue-100 to-transparent z-10" />
+
+  {/* Motion carousel */}
+  <motion.div
+    className="flex"
+    animate={{ x: ["0%", "-100%"] }}
+    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+  >
+    {testimonials.map((testimonial) => (
+      <div className="flex-shrink-0 w-1/4 p-4" key={testimonial.name}>
+        <TestimonialCard {...testimonial} />
       </div>
-      <div className="testimonials flex flex-col md:flex-row gap-6 justify-center items-stretch mt-20 w-5/6 mx-auto ">
-        {testimonials.map((testimonial) => (
-          <TestimonialCard key={testimonial.name} {...testimonial} />
-        ))}
+    ))}
+
+    {testimonials.map((testimonial, index) => (
+      <div
+        className="flex-shrink-0 w-1/4 p-4"
+        key={testimonial.name + "-duplicate-" + index}
+      >
+        <TestimonialCard {...testimonial} />
       </div>
-        </div>
-   
-  )
+    ))}
+  </motion.div>
+</div>
+
+
+    </div>
+  );
 }
 
-export default Testimonials
+export default Testimonials;

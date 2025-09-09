@@ -21,7 +21,7 @@ const OnboardingJourney = () => {
     delay: delay,
   });
   return (
-    <div className="min-h-screen bg-blue-600 flex flex-col items-center justify-center p-4 sm:p-8 mt-40">
+    <div className="min-h-screen bg-blue-600 flex flex-col items-center justify-center p-4 sm:p-8 md:mt-96">
       <div className="text-center mb-12 px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
           Launch your journey

@@ -65,12 +65,8 @@ const Testimonials = () => {
         </div>
         <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
       </div>
-<div className="relative w-5/6 mx-auto mt-20 overflow-hidden">
-  {/* Left fade */}
-  <div className="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white via-blue-100 to-transparent z-10" />
+<div className="relative w-5/6 mx-auto mt-20 ">
 
-  {/* Right fade */}
-  <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white via-blue-100 to-transparent z-10" />
 
   {/* Motion carousel */}
   <motion.div

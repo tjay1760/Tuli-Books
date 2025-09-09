@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, scale } from 'motion/react';
 import googlecard from '../assets/images/google-card.png'
 import kcbcard from '../assets/images/kcb-card.png'
 import stripecard from '../assets/images/stripe-card.png'
@@ -38,10 +39,28 @@ const topRow = companies.slice(0, 2);
 const middleRow = companies.slice(2, companies.length - 2);
 const bottomRow = companies.slice(companies.length - 2);
 
-const Card = ({ logo, name }) => (
-  <div className="max-w-32 max-h-32 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white">
+   const cardVariants = {
+    initial: { opacity: 0, scale: 0.5, y: 40 },
+    whileInView: { opacity: 1, scale: 1, y: 0 },
+  };
+
+  const transitionProps = (delay) => ({
+    duration: 0.8,
+    ease: [0.25, 0.8, 0.25, 1], // A smooth cubic-bezier easing curve
+    delay: delay,
+  });
+  
+const Card = ({ logo, name, }) => (
+  <motion.div
+    className="max-w-32 max-h-32 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white"
+    variants={cardVariants}
+    initial="initial"
+    whileInView="whileInView"
+    viewport={{ once: true, amount: 0.3 }}
+    transition={transitionProps(Math.random() * 0.5)} // Random delay for staggered effect
+  >
     <img src={logo} alt={`${name} Logo`} className="object-contain" />
-  </div>
+  </motion.div>
 );
 
 const Platforms = () => {

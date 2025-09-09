@@ -19,8 +19,8 @@ const chatbotQuestions = [
   "What is the churn rate for the past 6 months?",
 ];
 const texts = [
-    "Finance Software",
-    "Sales Software",
+    "Finance",
+    "Sales",
     "Inventory management",
     "Vendor Insights",
     "Growth Companion"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import GoogleIcon from '../assets/images/google-logo.png';
 import FacebookIcon from '../assets/images/facebook-logo.png';
 import SuccessImage from '../assets/images/Illustration.png'
@@ -8,6 +9,17 @@ import LikeImage from '../assets/images/thumbs up.png';
 
 
 const OnboardingJourney = () => {
+
+   const cardVariants = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+  };
+
+  const transitionProps = (delay) => ({
+    duration: 0.8,
+    ease: [0.25, 0.8, 0.25, 1], // A smooth cubic-bezier easing curve
+    delay: delay,
+  });
   return (
     <div className="min-h-screen bg-blue-600 flex flex-col items-center justify-center p-4 sm:p-8 mt-40">
       <div className="text-center mb-12 px-4">
@@ -21,7 +33,14 @@ const OnboardingJourney = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
         {/* Sign Up Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col">
+        <motion.div 
+          variants={cardVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transitionProps(0)} // No delay for the first card
+
+        className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col">
           <h3 className="text-2xl font-bold mb-4 text-center">Sign Up</h3>
           <div className="flex justify-center space-x-4 mb-6">
             <button className="flex items-center space-x-2 px-4 py-2 border rounded-full text-sm font-medium hover:bg-gray-50 transition">
@@ -52,10 +71,16 @@ const OnboardingJourney = () => {
               Get started in minutes. Just enter your details and personalize your business profile.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Explore Our Services Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center">
+        <motion.div 
+           variants={cardVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transitionProps(0.2)} // No delay for the first card
+        className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center">
           <div className="w-full h-48 bg-gray-100 rounded-2xl flex items-center justify-center p-4">
             <div className="">
               <img src={SuccessImage} alt="Success" className="w-20" />
@@ -71,10 +96,17 @@ const OnboardingJourney = () => {
               Sign up and explore the platform on your own — or get guided support by booking a free call.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Start Managing with Ease Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center">
+        <motion.div
+           variants={cardVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transitionProps(0.4)} // No delay for the first card
+
+        className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center">
           <div className="w-full h-48 bg-gray-100 rounded-2xl flex items-center justify-center p-4">
             <div className="w-full h-full max-h-40">
               <img src={BarChartImage} alt="Bar Chart" className="w-full h-full object-contain" />
@@ -86,7 +118,7 @@ const OnboardingJourney = () => {
               Begin tracking your finances, sending invoices, and automating tasks — or chat with our experts on WhatsApp for help anytime.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

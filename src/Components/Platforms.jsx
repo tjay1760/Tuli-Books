@@ -26,43 +26,73 @@ const companies = [
   { name: 'Microsoft', logo: microsoftcard },
   { name: 'OneDrive', logo: onedrivecard },
   { name: 'Dropbox', logo: dropboxcard },
+  { name: 'Paypal', logo: paypalcard },
+  { name: 'Paypal', logo: paypalcard },
   { name: 'Visa', logo: visacard },
   { name: 'Mastercard', logo: mastercardcard },
   { name: 'Pawa AI', logo: pawaicard },
   { name: 'M-pesa2', logo: mpesa2card },
   { name: 'FlutterWave', logo: flutterwavecard },
 ];
+const topRow = companies.slice(0, 2);
+const middleRow = companies.slice(2, companies.length - 2);
+const bottomRow = companies.slice(companies.length - 2);
 
 const Card = ({ logo, name }) => (
-  <div class="logo-card">
-    <img src={logo} alt={`${name} Logo`} class="h-32" />
+  <div className="max-w-32 max-h-32 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white">
+    <img src={logo} alt={`${name} Logo`} className="object-contain" />
   </div>
 );
 
 const Platforms = () => {
   return (
-  <div class=" flex items-center justify-center font-sans mt-20 px-10">
+  <div className=" flex items-center justify-center font-sans mt-20 px-10">
 
-    <div class="bg-white p-8 md:p-12 m-4 mx-auto w-full">
-        <div class="main-grid grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
-            <div class="flex flex-col items-start text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-[#0957FF] mb-4 leading-tight">
+    <div className="bg-white p-8 md:p-12 m-4 mx-auto w-full">
+        <div className="main-grid grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <div className="flex flex-col items-start text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-[#0957FF] mb-4 leading-tight">
                     All Our Connected Platforms
                 </h1>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                     These business tools and many more to come, work well with Tuli Books
                 </p>
-                <button class="bg-[#0957FF] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+                <button className="bg-[#0957FF] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
                     Explore integration
                 </button>
             </div>
 
-            <div class="logo-grid grid grid-cols-4 gap-6">
-              {companies.map((company) => (
+<div className="flex gap-2 flex-col">
+<div className="logo-grid grid grid-cols-4 gap-6">
+  {topRow.map((company, idx) => (
+    <div
+      key={company.name}
+      className={idx === 0 ? "col-start-2" : ""}
+    >
+      <Card logo={company.logo} name={company.name} />
+    </div>
+  ))}
+</div>
+
+            <div className="logo-grid grid grid-cols-4 gap-6">
+              {middleRow.map((company) => (
                 <Card key={company.name} logo={company.logo} name={company.name} />
               ))}
             </div>
+<div className="logo-grid grid grid-cols-4 gap-6">
+  {bottomRow.map((company, idx) => (
+    <div
+      key={company.name}
+      className={idx === 0 ? "col-start-2" : ""}
+    >
+      <Card logo={company.logo} name={company.name} />
+    </div>
+  ))}
+</div>
+
+</div>
+
         </div>
     </div>
 

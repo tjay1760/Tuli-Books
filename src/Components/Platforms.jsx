@@ -55,10 +55,10 @@ const Platforms = () => {
                 <h1 className="text-4xl md:text-5xl font-extrabold text-[#0957FF] mb-4 leading-tight">
                     All Our Connected Platforms
                 </h1>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    These business tools and many more to come, work well with Tuli Books
+                <p className="text-xl text-gray-900 mb-8 leading-relaxed font-semibold">
+                    These business tools and many more to come, <br /> work well with Tuli Books
                 </p>
-                <button className="bg-[#0957FF] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+                <button className="bg-[#0957FF] text-white text-2xl py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
                     Explore integration
                 </button>
             </div>

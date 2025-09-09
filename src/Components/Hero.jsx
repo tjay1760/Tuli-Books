@@ -1,5 +1,7 @@
-import {useState, useEffect, use} from 'react'
-import { ReactTyped } from 'react-typed'
+import React, {useState, useEffect} from 'react'
+import { Link, Element } from 'react-scroll';
+
+import { ReactTyped } from 'react-typed';
 import Heroimage from '../assets/images/Tuli-hero-image.png'
 const chatbotQuestions = [
   "What are the top 5 vendors this month?",
@@ -21,9 +23,9 @@ const chatbotQuestions = [
 const texts = [
     "Finance",
     "Sales",
-    "Inventory management",
-    "Vendor Insights",
-    "Growth Companion"
+    "Inventory",
+    "Marketing",
+    "Business"
   ];
 
 const Hero = () => {
@@ -36,9 +38,9 @@ const Hero = () => {
     }, []);
 
   return (
-    <div className='grid grid-cols-2 gap-10 px-10'>
-      <div className="words flex flex-col items-start justify-center gap-10">
-        <div className="heading text-7xl font-bold leading-20 text-[#071D6E]">
+    <div className='md:grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 p-4 sm:p-6 md:p-8 lg:px-10'>
+      <div className="words flex flex-col items-start justify-center gap-6 sm:gap-8 md:gap-10">
+        <div className="heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-20 text-[#071D6E]">
           All-in-one &nbsp;
             <ReactTyped
             strings={texts}
@@ -51,23 +53,23 @@ const Hero = () => {
           Software
              for Individuals and Growing Businesses
         </div>
-        <div className="description font-semibold text-xl text-[#071D6E]">
+        <div className="description font-semibold text-lg sm:text-xl text-[#071D6E]">
           Simplify Bookeeping Invoicing and tax compliance with AI-powered Tools
         </div>
-        <div className="bot border bg-[#071D6E] w-5/6 flex justify-between p-2 rounded">
+        <div className="bot border bg-[#071D6E] w-full max-w-lg flex flex-wrap justify-between p-2 rounded">
           <ReactTyped
             strings={chatbotQuestions}
             typeSpeed={40}
             backSpeed={50}
             loop
-            className="flex-1 px-4 py-3 text-white bg-transparent border-none outline-none text-lg"
+            className="flex-1 px-4 py-3 text-white bg-transparent border-none outline-none text-base sm:text-lg"
           />
           <button
-          className='border px-4 py-2 font-bold text-[#071D6E] bg-white rounded-xl shadow-lg'
+          className='border px-4 py-2 font-bold text-[#071D6E] bg-white rounded-xl shadow-lg mt-2 sm:mt-0'
           >Tuli chat</button>
         </div>
       </div>
-      <div className="hero-image">
+      <div className="hero-image hidden md:block">
         <img src={Heroimage} alt="Hero Image"
         className='w-full'
         />
@@ -76,4 +78,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;

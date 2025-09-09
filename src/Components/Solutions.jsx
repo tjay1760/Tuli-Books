@@ -43,7 +43,7 @@ const Solutions = () => {
       <div className="heading text-7xl font-bold text-center">
         <span className='text-[#0066FF]'>Accounting Solutions for Every</span> <br/> <span className='text-[#071D6E]'>Business Needs</span>
       </div>
-      <div className="services grid grid-cols-2 mt-20 items-center justify-between">
+      <div className="services grid md:grid-cols-2 mt-20 items-center justify-between">
         <div className="chart mx-auto">
           <img src={Chart1} alt="Chart 1" className='' />
         </div>
@@ -93,7 +93,7 @@ bg = "#D6D2FF"
         </div>
         <div className="chart chart-4 mx-auto relative">
           <img src={Chart3} alt="Chart 3" className=''/>
-          <img src={Chart4} alt="Chart 4" className='absolute left-72 top-80'/>
+          <img src={Chart4} alt="Chart 4" className='hidden md:block absolute left-72 top-80'/>
         </div>
         <div className="service text-[#0066FF] mx-auto">
           <h1 className='text-4xl font-bold mb-10'>Explore our Features</h1>

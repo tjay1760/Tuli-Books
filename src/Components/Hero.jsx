@@ -21,9 +21,9 @@ const chatbotQuestions = [
 const texts = [
     "Finance",
     "Sales",
-    "Inventory management",
-    "Vendor Insights",
-    "Growth Companion"
+    "Inventory",
+    "Marketing",
+    "Business"
   ];
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
     }, []);
 
   return (
-    <div className='grid grid-cols-2 gap-10 px-10'>
+    <div className='md:grid md:grid-cols-2 gap-10 px-10'>
       <div className="words flex flex-col items-start justify-center gap-10">
         <div className="heading text-7xl font-bold leading-20 text-[#071D6E]">
           All-in-one &nbsp;
@@ -67,7 +67,7 @@ const Hero = () => {
           >Tuli chat</button>
         </div>
       </div>
-      <div className="hero-image">
+      <div className="hero-image hidden md:block">
         <img src={Heroimage} alt="Hero Image"
         className='w-full'
         />

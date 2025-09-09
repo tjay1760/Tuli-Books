@@ -65,7 +65,7 @@ const Testimonials = () => {
         </div>
         <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
       </div>
-<div className="relative w-5/6 mx-auto mt-20 ">
+<div className="relative w-full mx-auto mt-20 overflow-hidden">
 
 
   {/* Motion carousel */}

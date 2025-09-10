@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react';
+import SecurityRing from './SecurityRing';
 import Chart1 from '../assets/images/chart-1.png'
 import Chart2 from '../assets/images/chart-2.png'
 import Chart3 from '../assets/images/chart-3.png'
@@ -99,8 +100,11 @@ const Solutions = () => {
 
         <div className="chart chart-4 w-full mx-auto max-w-lg relative order-first md:order-none">
           <img src={Chart3} alt="Chart 3" className='w-full h-auto'/>
-          <img src={Chart4} alt="Chart 4" className='hidden md:block absolute left-72 top-80'/>
+          <div className='hidden md:block absolute left-72 top-80'>
+        <SecurityRing/>
+          </div>
         </div>
+
         <div className="service w-full text-[#0066FF] mx-auto max-w-lg">
           <h1 className='text-3xl sm:text-4xl font-bold mb-6 sm:mb-10'>Explore our Features</h1>
           <ul className='list-disc space-y-4 sm:space-y-6 text-base sm:text-lg'>

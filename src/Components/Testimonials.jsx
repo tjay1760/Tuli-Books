@@ -68,7 +68,7 @@ const [speed, setSpeed] = React.useState(20);
       </div>
       </div>
 
-<div className="relative w-full mx-auto mt-20 overflow-hidden">
+<div className="relative w-full mx-auto mt-20 overflow-hidden lg:max-w-[100rem]">
 
 
   {/* Motion carousel */}

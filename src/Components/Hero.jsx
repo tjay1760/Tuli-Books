@@ -38,9 +38,9 @@ const Hero = () => {
     }, []);
 
   return (
-    <div className='md:flex gap-6 sm:gap-8 md:gap-10 p-4 sm:p-6 md:p-8 lg:px-10 mx-auto items-center justify-center'>
+    <div className='md:flex gap-6 sm:gap-8 md:gap-10 p-4 sm:p-6 md:p-8 lg:px-10 mx-auto items-center justify-center lg:max-w-[100rem]'>
       <div className="words flex flex-col items-start justify-center gap-6 sm:gap-8 md:gap-10">
-        <div className="heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-20 text-[#071D6E]">
+        <div className="heading text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold leading-tight md:leading-20 text-[#071D6E]">
           All-in-one &nbsp;
             <ReactTyped
             strings={texts}

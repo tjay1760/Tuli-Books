@@ -50,10 +50,11 @@ const TestimonialCard = ({ name, company, companyLogo, feedback }) => (
 );
 
 const Testimonials = () => {
-
+const [speed, setSpeed] = React.useState(20);
 
   return (
     <div className='mt-20 mb-20 px-10'>
+      <div className="holder lg:max-w-[100rem] lg:mx-auto">
       <h1 className='text-center text-6xl font-bold my-8 text-[#0066FF]'>Trusted by thousands of startups, small <br/> businesses and accounting firms </h1>
       <div className="supported-companies px-6 mx-auto">
         <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
@@ -65,21 +66,26 @@ const Testimonials = () => {
         </div>
         <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
       </div>
-<div className="relative w-full mx-auto mt-20 overflow-hidden">
+      </div>
+
+<div className="relative w-full mx-auto mt-20 overflow-hidden lg:max-w-[100rem]">
 
 
   {/* Motion carousel */}
   <motion.div
+  key={speed}
     className="flex"
     animate={{ x: ["0%", "-100%"] }}
-    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+    transition={{ repeat: Infinity, duration: speed, ease: "linear" }}
+    onMouseEnter={() => setSpeed(100)}
+    onMouseLeave={() => setSpeed(20)}
   >
     {testimonials.map((testimonial) => (
       <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 p-4" key={testimonial.name}>
         <TestimonialCard {...testimonial} />
       </div>
     ))}
-
+{console.log("Speed",speed)}
     {testimonials.map((testimonial, index) => (
       <div
         className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 p-4"

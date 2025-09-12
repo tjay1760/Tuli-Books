@@ -92,8 +92,9 @@ const OnboardingJourney = () => {
   });
 
   return (
-    <div className="min-h-screen bg-blue-600 flex flex-col items-center justify-center py-12 md:py-24 md:mt-72">
-      <div className="text-center mb-12 px-4 max-w-2xl mx-auto">
+    <div className="min-h-screen bg-blue-600 flex flex-col items-center justify-center py-12 md:py-24 md:mt-72 ">
+      <div className="holder lg:max-w-[100rem]">
+           <div className="text-center mb-12 px-4 max-w-2xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
           Launch your journey
         </h1>
@@ -129,7 +130,9 @@ const OnboardingJourney = () => {
 </motion.div>
 
         ))}
+      </div>   
       </div>
+
     </div>
   );
 };

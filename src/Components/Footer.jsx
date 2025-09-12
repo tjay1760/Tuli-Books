@@ -4,7 +4,7 @@ import TuliLogo from '../assets/images/TuliBooksLogo.png';
 
 const Footer = () => {
   return (
-    <footer className="font-sans text-[#071D6E] px-10 mt-20">
+    <footer className="font-sans text-[#071D6E] px-10 mt-20 lg:max-w-[100rem] lg:mx-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {/* Column 1: Company Info */}

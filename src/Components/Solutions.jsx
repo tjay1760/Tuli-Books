@@ -40,7 +40,7 @@ const FeatureCard = ({ title, description, icon, bg }) => (
 
 const Solutions = () => {
   return (
-    <div className='mt-12 sm:mt-16 md:mt-24 p-4 sm:p-6 md:p-8 max-w-8xl mx-auto'>
+    <div className='mt-12 sm:mt-16 md:mt-24 p-4 sm:p-6 md:p-8 lg:max-w-[100rem] mx-auto'>
       <div className="heading text-center mb-12 sm:mb-16">
         <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0066FF] leading-tight'>
           Accounting Solutions for Every

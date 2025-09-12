@@ -11,7 +11,7 @@ const DemoSection = () => {
       <div className="absolute inset-0 bg-[#0066FF] bg-radial-[at_95%_95%] from-blue-400 via-blue-500 to-blue-700 to-90% opacity-90"></div>
       
       {/* Content Container */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-auto">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-auto lg:max-w-[100rem]">
         {/* Left Text Content */}
         <div className="flex flex-col items-start text-center lg:text-left p-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">

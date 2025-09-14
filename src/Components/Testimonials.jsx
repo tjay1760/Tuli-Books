@@ -58,7 +58,7 @@ const [speed, setSpeed] = React.useState(20);
       <h1 className='text-center text-6xl font-bold my-8 text-[#0066FF]'>Trusted by thousands of startups, small <br/> businesses and accounting firms </h1>
       <div className="supported-companies px-6 mx-auto">
         <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
-        <div className="logos flex flex-col md:flex-row gap-6 items-center justify-between mb-10 w-5/6 mx-auto">
+        <div className="logos flex flex-col lg:flex-row gap-6 items-center justify-between mb-10 w-5/6 mx-auto">
           <img src={sartifyLogo} alt="Sartify Logo" className="h-36 mx-4" />
           <img src={pawaaiLogo} alt="Pawa AI Logo" className="h-36 mx-4" />
           <img src={dociproLogo} alt="DociPro Logo" className="h-36 mx-4" />

@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu & Buttons - Hidden on Mobile */}
-        <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-[#071D6E]">
+        <div className="hidden lg:flex items-center gap-6 text-sm font-semibold text-[#071D6E]">
           {NavLinks.map((link, index) => (
             <a key={index} href={link.path} className="hover:text-blue-500 transition-colors">
               {link.name}
@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Hamburger Menu Button - Hidden on Desktop */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button onClick={toggleMenu} className="focus:outline-none p-2 rounded-md hover:bg-gray-200 transition-colors">
             {isOpen ? (
               <svg className="w-6 h-6 text-[#071D6E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

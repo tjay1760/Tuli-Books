@@ -69,7 +69,7 @@ const Hero = () => {
           >Tuli chat</button>
         </div>
       </div>
-      <div className="hero-image hidden md:block">
+      <div className="hero-image hidden lg:block">
         <img src={Heroimage} alt="Hero Image"
         className='max-w-7xl'
         />

@@ -45,7 +45,7 @@ const Solutions = () => {
         <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0066FF] leading-tight'>
           Accounting Solutions for Every
           <br className="hidden sm:block" />
-          <span className='text-[#071D6E]'>Business Needs</span>
+          <span className='text-[#071D6E]'>&nbsp;Business Needs</span>
         </h1>
       </div>
       

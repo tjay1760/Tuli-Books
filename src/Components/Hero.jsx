@@ -67,9 +67,9 @@ const Hero = () => {
             className="flex-1 px-4 py-3 text-white bg-transparent border-none outline-none text-base sm:text-lg"
           />
           <button
-          className='border px-4 py-2 font-bold text-[#071D6E] bg-white rounded-xl shadow-lg mt-2 sm:mt-0 flex items-center justify-center gap-2'
+          className='border px-5 py-2 font-medium text-[#071D6E] text-xl bg-white rounded-xl shadow-lg mt-2 sm:mt-0 flex items-center justify-center gap-2'
           >Tuli Chat
-          <FaArrowRight className='inline-block ml-2' />
+          <FaArrowRight className='inline-block ml-2 font-medium' />
           </button>
         </div>
       </div>

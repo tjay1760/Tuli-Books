@@ -17,30 +17,30 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white shadow-lg p-4 sm:p-6 sticky top-0 z-50">
+    <div className="bg-white p-4 sm:p-6 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center gap-2 sm:gap-4">
-          <img src={TuliLogo} alt="TuliBooks Logo" className="h-8 sm:h-10" />
-          <img src={TuliBookText} alt="TuliBooks Text" className="h-6 sm:h-8" />
+          <img src={TuliLogo} alt="TuliBooks Logo" className="h-8 sm:h-10 md:h-12" />
+          <h1 className="text-4xl font-extrabold text-[#071D6E]">Tuli Books</h1>
         </div>
 
         {/* Desktop Menu & Buttons - Hidden on Mobile */}
-        <div className="hidden lg:flex items-center gap-6 text-sm font-semibold text-[#071D6E]">
+        <div className="hidden lg:flex items-center gap-6 text-xl font-medium text-[#071D6E]">
           {NavLinks.map((link, index) => (
             <a key={index} href={link.path} className="hover:text-blue-500 transition-colors">
               {link.name}
             </a>
           ))}
-          <div className="flex items-center gap-4 ml-6">
-            <button className="text-white bg-[#071D6E] py-2 px-4 rounded-full shadow-lg hover:bg-blue-800 transition-colors">
+        </div>
+                 <div className="flex items-center gap-4 ml-6">
+            <button className="text-white bg-[#071D6E] py-2 px-4 font-bold rounded-lg shadow-lg hover:bg-blue-800 transition-colors">
               Sign In
             </button>
-            <button className="text-[#071D6E] bg-white border border-[#071D6E] py-2 px-4 rounded-full hover:bg-gray-100 transition-colors">
+            <button className="text-[#071D6E] bg-white border border-[#071D6E] py-2 px-4 font-bold rounded-lg hover:bg-gray-100 transition-colors">
               Get Started
             </button>
           </div>
-        </div>
 
         {/* Mobile Hamburger Menu Button - Hidden on Desktop */}
         <div className="lg:hidden flex items-center">

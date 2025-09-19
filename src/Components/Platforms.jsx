@@ -65,7 +65,7 @@ const Card = ({ logo, name, }) => (
 
 const Platforms = () => {
   return (
-  <div className=" flex items-center justify-center font-sans mt-20 px-10 max-w-7xl mx-auto">
+  <div className=" flex items-center justify-center font-sans mt-20 px-10 max-w-7xl mx-auto bg-[#F7FAFF]">
 
     <div className="bg-white p-8 md:p-12 m-4 mx-auto w-full">
         <div className="main-grid hidden md:flex flex-col gap-24 xl:flex-row items-center">

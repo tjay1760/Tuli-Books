@@ -42,14 +42,14 @@ const Solutions = () => {
   return (
     <div className='mt-12 sm:mt-16 md:mt-24 p-4 sm:p-6 md:p-8 lg:max-w-[100rem] mx-auto'>
       <div className="heading text-center mb-12 sm:mb-16">
-        <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0066FF] leading-tight'>
+        <h1 className='text-4xl sm:text-5xl md:text-5xl lg:text-5xl font-bold text-[#0066FF] leading-tight'>
           Accounting Solutions for Every
           <br className="hidden sm:block" />
           <span className='text-[#071D6E]'>&nbsp;Business Needs</span>
         </h1>
       </div>
       
-      <div className="services grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-20 items-center justify-between w-full">
+      <div className="services grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 md:mt-20 items-center justify-between w-full">
         <div className="chart w-full mx-auto max-w-lg">
           <img src={Chart1} alt="Chart 1" className='w-full h-auto' />
         </div>
@@ -100,18 +100,18 @@ const Solutions = () => {
 
         <div className="chart chart-4 w-full mx-auto max-w-lg relative order-first md:order-none">
           <img src={Chart3} alt="Chart 3" className='w-full h-auto'/>
-          <div className='hidden md:block absolute left-72 top-80'>
+          <div className='hidden lg:block absolute left-45 top-80'>
         <SecurityRing/>
           </div>
         </div>
 
         <div className="service w-full text-[#0066FF] mx-auto max-w-lg">
           <h1 className='text-3xl sm:text-4xl font-bold mb-6 sm:mb-10'>Explore our Features</h1>
-          <ul className='list-disc space-y-4 sm:space-y-6 text-base sm:text-lg'>
-            <li className='flex gap-4 items-center'><img src={shieldIcon} alt="AI Powered Smart Bookkeeping" className="h-8 w-8 sm:h-10 sm:w-10" />AI Powered Smart Bookkeeping</li>
-            <li className='flex gap-4 items-center'><img src={shieldIcon} alt="Experience the ultimate in financial security" className="h-8 w-8 sm:h-10 sm:w-10" />Experience the ultimate in financial security</li>
-            <li className='flex gap-4 items-center'><img src={shieldIcon} alt="Advanced Real-Time Financial Reporting" className="h-8 w-8 sm:h-10 sm:w-10" />Advanced Real-Time Financial Reporting</li>
-            <li className='flex gap-4 items-center'><img src={shieldIcon} alt="Save your time and reduce financial anxiety" className="h-8 w-8 sm:h-10 sm:w-10" />Save your time and reduce financial anxiety</li>
+          <ul className='list-disc space-y-4 sm:space-y-6 text-base sm:text-lg lg:pl-10'>
+            <li className='flex gap-4 items-center text-2xl'><img src={shieldIcon} alt="AI Powered Smart Bookkeeping" className="h-8 sm:h-10" />AI Powered Smart Bookkeeping</li>
+            <li className='flex gap-4 items-center text-2xl'><img src={shieldIcon} alt="Experience the ultimate in financial security" className="h-8  sm:h-10" />Experience the ultimate in financial security</li>
+            <li className='flex gap-4 items-center text-2xl'><img src={shieldIcon} alt="Advanced Real-Time Financial Reporting" className="h-8  sm:h-10" />Advanced Real-Time Financial Reporting</li>
+            <li className='flex gap-4 items-center text-2xl'><img src={shieldIcon} alt="Save your time and reduce financial anxiety" className="h-8  sm:h-10" />Save your time and reduce financial anxiety</li>
           </ul>
         </div>
       </div>

@@ -8,7 +8,7 @@ const DemoSection = () => {
   return (
     <div className="p-8 flex flex-col lg:flex-row items-center justify-center relative overflow-hidden text-white">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-[#0066FF] bg-radial-[at_95%_95%] from-blue-400 via-blue-500 to-blue-700 to-90% opacity-90"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-[#0957FF] to-[#009DFF]"></div>
       
       {/* Content Container */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-auto lg:max-w-[100rem]">
@@ -26,9 +26,17 @@ const DemoSection = () => {
         </div>
 
         {/* Right Mobile Image */}
-        <div className="flex justify-center items-center p-4">
-          <img src={PhoneMockup} alt="Mobile App Demo" className="w-64 md:w-80 lg:w-96 shadow-2xl rounded-3xl" />
-        </div>
+<div className="flex justify-center items-center p-4 relative">
+  <img
+    src={PhoneMockup}
+    alt="Mobile App Demo"
+    className="w-64 md:w-80 lg:w-96 shadow-2xl rounded-3xl"
+  />
+
+  {/* Overlay */}
+  <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-blue-500/60 to-transparent pointer-events-none w-64 md:w-80 lg:w-96 mx-auto"></div>
+</div>
+
       </div>
     </div>
   );

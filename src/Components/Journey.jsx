@@ -92,7 +92,7 @@ const OnboardingJourney = () => {
   });
 
   return (
-    <div className="min-h-screen bg-blue-600 flex flex-col items-center justify-center py-12 md:py-24 md:mt-72 ">
+    <div className="min-h-screen bg-linear-to-b from-[#0957FF] to-[#009DFF] flex flex-col items-center justify-center py-12 md:py-24 md:mt-72 ">
       <div className="holder lg:max-w-[100rem]">
            <div className="text-center mb-12 px-4 max-w-2xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
@@ -112,18 +112,18 @@ const OnboardingJourney = () => {
   whileInView="whileInView"
   viewport={{ once: true, amount: 0.3 }}
   transition={transitionProps(card.delay)}
-  className="group bg-white rounded-3xl p-4 sm:p-6 flex flex-col items-center text-center
+  className="group bg-white rounded-3xl p-1 sm:p-1 pb-10 mb-10 h-full flex flex-col items-center text-center
              hover:shadow-2xl hover:bg-[#0066ff] hover:text-white
              transition-colors duration-700 ease-in-out"
 >
-  <div className="card-top w-full p-4 sm:p-6 rounded-2xl mb-4 flex flex-col items-center shadow-lg z-10 
+  <div className="min-h-7/12 card-top w-full p-1 sm:p-1 rounded-2xl mb-4 flex flex-col items-center shadow-lg z-10 
                   bg-white text-black group-hover:bg-white group-hover:text-black transition-colors duration-1000 ease-in-out">
     {card.content}
   </div>
 
-  <div className="mt-auto p-4 sm:p-6 text-left flex flex-col items-start rounded-2xl gap-4">
+  <div className="mt-auto p-2 sm:p-2 text-left flex flex-col items-start rounded-2xl gap-4">
     <h3 className="text-xl sm:text-2xl font-bold">{card.title}</h3>
-    <p className="text-[#0066FF] text-base sm:text-xl mb-4 group-hover:text-white transition-colors duration-1000 ease-in-out">
+    <p className="text-[#0066FF] text-xs sm:text-xl mb-4 group-hover:text-white transition-colors duration-1000 ease-in-out">
       {card.description}
     </p>
   </div>

@@ -35,7 +35,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ name, company, companyLogo, feedback }) => (
-  <div className="testimonial-card border p-6 rounded-lg shadow-lg bg-[#071D6E] text-white flex flex-col justify-between">
+  <div className="testimonial-card border p-6 rounded-3xl shadow-lg bg-[#071D6E] hover:bg-[#CCCCCC] text-white flex flex-col justify-between">
     <div>
       <div className="header flex items-center mb-4">
         <img src={companyLogo} alt={`${company} Logo`} className="h-12 w-12 mr-4" />
@@ -57,14 +57,14 @@ const [speed, setSpeed] = React.useState(20);
       <div className="holder lg:max-w-[100rem] lg:mx-auto">
       <h1 className='text-center text-4xl font-bold my-8 text-[#0066FF]'>Trusted by thousands of startups, small <br/> businesses and accounting firms </h1>
       <div className="supported-companies px-6 mx-auto">
-        <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
+        <div className="line h-0.5 bg-[#0066FF] w-full my-10 mx-auto"></div>
         <div className="logos flex flex-col lg:flex-row gap-6 items-center justify-between mb-10 w-5/6 mx-auto">
-          <img src={sartifyLogo} alt="Sartify Logo" className="h-36 mx-4" />
-          <img src={pawaaiLogo} alt="Pawa AI Logo" className="h-36 mx-4" />
-          <img src={dociproLogo} alt="DociPro Logo" className="h-36 mx-4" />
-          <img src={tutorAilogo} alt="Tutor AI Logo" className="h-36 mx-4" />
+          <img src={sartifyLogo} alt="Sartify Logo" className="h-20 md:h-28 mx-4" />
+          <img src={pawaaiLogo} alt="Pawa AI Logo" className="h-20 md:h-28 mx-4" />
+          <img src={dociproLogo} alt="DociPro Logo" className="h-20 md:h-28 mx-4" />
+          <img src={tutorAilogo} alt="Tutor AI Logo" className="h-20 md:h-28 mx-4" />
         </div>
-        <div className="line h-0.5 bg-[#0066FF] w-5/6 my-10 mx-auto"></div>
+        <div className="line h-0.5 bg-[#0066FF] w-full my-10 mx-auto"></div>
       </div>
       </div>
 
@@ -81,7 +81,7 @@ const [speed, setSpeed] = React.useState(20);
     onMouseLeave={() => setSpeed(20)}
   >
     {testimonials.map((testimonial) => (
-      <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 p-4" key={testimonial.name}>
+      <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 p-4 min-h-[20rem]" key={testimonial.name}>
         <TestimonialCard {...testimonial} />
       </div>
     ))}

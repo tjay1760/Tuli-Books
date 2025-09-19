@@ -1,20 +1,20 @@
 import React from 'react'
 import { motion, scale } from 'motion/react';
-import googlecard from '../assets/images/google-card.png'
-import kcbcard from '../assets/images/kcb-card.png'
-import stripecard from '../assets/images/stripe-card.png'
-import equitycard from '../assets/images/equity-card.png'
-import whatsappcard from '../assets/images/whatapp-card.png'
-import mpesacard from '../assets/images/mpesa-card.png'
+import googlecard from '../assets/images/google-logo1.png'
+import kcbcard from '../assets/images/kcb-logo.png'
+import stripecard from '../assets/images/stripe-logo.png'
+import equitycard from '../assets/images/equity-bank-logo 1.png'
+import whatsappcard from '../assets/images/whatsapp-logo.png'
+import mpesacard from '../assets/images/mpesa-logo.png'
 import paypalcard from '../assets/images/paypal-logo.png'
-import microsoftcard from '../assets/images/windows-card.png'
-import onedrivecard from '../assets/images/onedrive-card.png'
-import dropboxcard from '../assets/images/dropbox-card.png'
-import visacard from '../assets/images/visa-card.png'
-import mastercardcard from '../assets/images/master-card.png'
-import pawaicard from '../assets/images/pawa-ai-card.png'
-import mpesa2card from '../assets/images/mpesa-card2.png'
-import flutterwavecard from '../assets/images/flutterwave.png'
+import microsoftcard from '../assets/images/windows-logo.png'
+import onedrivecard from '../assets/images/onedrive-logo.png'
+import dropboxcard from '../assets/images/dropbox-logo.png'
+import visacard from '../assets/images/visa-logo.png'
+import mastercardcard from '../assets/images/mastercard-logo.png'
+import pawaicard from '../assets/images/pawa-ai-logo.png'
+import mpesa2card from '../assets/images/M-pesa-logo 1.png'
+import flutterwavecard from '../assets/images/flutterwave-logo.png'
 
 
 const companies = [
@@ -52,7 +52,7 @@ const bottomRow = companies.slice(companies.length - 2);
   
 const Card = ({ logo, name, }) => (
   <motion.div
-    className="max-w-32 max-h-32 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white"
+    className="w-28 h-28 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white"
     variants={cardVariants}
     initial="initial"
     whileInView="whileInView"

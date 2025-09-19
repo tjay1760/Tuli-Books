@@ -49,7 +49,7 @@ const Solutions = () => {
         </h1>
       </div>
       
-      <div className="services grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-20 items-center justify-between w-full">
+      <div className="services grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 md:mt-20 items-center justify-between w-full">
         <div className="chart w-full mx-auto max-w-lg">
           <img src={Chart1} alt="Chart 1" className='w-full h-auto' />
         </div>
@@ -100,7 +100,7 @@ const Solutions = () => {
 
         <div className="chart chart-4 w-full mx-auto max-w-lg relative order-first md:order-none">
           <img src={Chart3} alt="Chart 3" className='w-full h-auto'/>
-          <div className='hidden md:block absolute left-45 top-80'>
+          <div className='hidden lg:block absolute left-45 top-80'>
         <SecurityRing/>
           </div>
         </div>

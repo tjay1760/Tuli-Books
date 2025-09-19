@@ -102,8 +102,8 @@ const OnboardingJourney = () => {
           with Tuli books
         </h2>
       </div>
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl p-4 md:p-0 mx-auto justify-items-center">
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full max-w-6xl p-4 md:p-0">
         {cardData.map((card) => (
 <motion.div
   key={card.id}
@@ -112,7 +112,7 @@ const OnboardingJourney = () => {
   whileInView="whileInView"
   viewport={{ once: true, amount: 0.3 }}
   transition={transitionProps(card.delay)}
-  className="group bg-white rounded-3xl p-1 sm:p-1 pb-10 mb-10 h-full flex flex-col items-center text-center
+  className="group bg-white rounded-3xl p-1 sm:p-1 pb-10 mb-10 h-full max-w-[24rem] flex flex-col items-center text-center
              hover:shadow-2xl hover:bg-[#0066ff] hover:text-white
              transition-colors duration-700 ease-in-out"
 >

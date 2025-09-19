@@ -33,7 +33,7 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-                 <div className="flex items-center gap-4 ml-6">
+                 <div className="hidden lg:flex items-center gap-4 ml-6">
             <button className="text-white bg-[#071D6E] py-2 px-4 font-bold rounded-lg shadow-lg hover:bg-blue-800 transition-colors">
               Sign In
             </button>
@@ -59,7 +59,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu - Conditionally Rendered */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
         <div className="flex flex-col items-center gap-4 text-sm font-semibold text-[#071D6E] py-4">
           {NavLinks.map((link, index) => (
             <a key={index} href={link.path} className="block hover:text-blue-500 transition-colors">

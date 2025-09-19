@@ -52,7 +52,7 @@ const bottomRow = companies.slice(companies.length - 2);
   
 const Card = ({ logo, name, }) => (
   <motion.div
-    className="w-28 h-28 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white"
+    className="w-24 h-24 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white"
     variants={cardVariants}
     initial="initial"
     whileInView="whileInView"
@@ -68,7 +68,7 @@ const Platforms = () => {
   <div className=" flex items-center justify-center font-sans mt-20 px-10 max-w-7xl mx-auto">
 
     <div className="bg-white p-8 md:p-12 m-4 mx-auto w-full">
-        <div className="main-grid grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="main-grid hidden md:flex flex-col gap-24 xl:flex-row items-center">
 
             <div className="flex flex-col items-start text-center md:text-left">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-[#0957FF] mb-4 leading-tight">

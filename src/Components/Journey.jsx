@@ -114,24 +114,32 @@ const OnboardingJourney = () => {
   whileInView="whileInView"
   viewport={{ once: true, amount: 0.3 }}
   transition={transitionProps(card.delay)}
-  className="group bg-white rounded-3xl p-1 sm:p-1 pb-10 mb-10 h-full max-w-[24rem] flex flex-col items-center text-center
+  className="group bg-white rounded-3xl p-1 sm:p-1 pb-10 mb-10 
+             h-[32rem] max-w-[24rem] flex flex-col text-center
              hover:shadow-2xl hover:bg-[#0066ff] hover:text-white
              transition-colors duration-700 ease-in-out"
 >
-  <div className="min-h-7/12 card-top w-full p-1 sm:p-1 rounded-2xl mb-4 flex flex-col items-center shadow-lg z-10 
-                  bg-white text-black group-hover:bg-white group-hover:text-black transition-colors duration-1000 ease-in-out">
+  {/* Top section = 2/3 */}
+  <div className="flex-[1_1_0%] card-top w-full p-1 sm:p-1 rounded-2xl mb-4 
+                  flex flex-col items-center justify-center shadow-lg z-10 
+                  bg-white text-black 
+                  group-hover:bg-white group-hover:text-black 
+                  transition-colors duration-1000 ease-in-out">
     {card.content}
   </div>
 
-  <div className="mt-auto p-2 sm:p-2 text-left flex flex-col items-start rounded-2xl gap-4">
+  {/* Bottom section = 1/3 */}
+  <div className="flex-[2_2_0%] p-2 sm:p-2 text-left flex flex-col 
+                  items-start rounded-2xl gap-4 justify-center">
     <h3 className="text-xl sm:text-2xl font-bold">{card.title}</h3>
-    <p className="text-[#0066FF] text-xs sm:text-xl mb-4 group-hover:text-white transition-colors duration-1000 ease-in-out">
+    <p className="text-[#0066FF] text-xs sm:text-xl mb-4 
+                  group-hover:text-white 
+                  transition-colors duration-1000 ease-in-out">
       {card.description}
     </p>
   </div>
 </motion.div>
-          </ScrollParallax>
-
+</ScrollParallax>
 
         ))}
       </div>   

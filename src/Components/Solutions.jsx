@@ -12,6 +12,7 @@ import salesIcon from '../assets/images/sales-icon.png'
 import inventoryIcon from '../assets/images/inventory-icon.png'
 import reportsIcon from '../assets/images/reports-icon.png'
 import shieldIcon from '../assets/images/shield-icon.png'
+import {MouseParallax, ScrollParallax } from "react-just-parallax";
 
 
 const FeatureCard = ({ title, description, icon, bg }) => (
@@ -101,7 +102,9 @@ const Solutions = () => {
         <div className="chart chart-4 w-full mx-auto max-w-lg relative order-first md:order-none">
           <img src={Chart3} alt="Chart 3" className='w-full h-auto'/>
           <div className='hidden lg:block absolute left-45 top-80'>
-        <SecurityRing/>
+            <MouseParallax>
+              <SecurityRing/>
+            </MouseParallax>
           </div>
         </div>
 

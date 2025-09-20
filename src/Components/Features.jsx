@@ -1,5 +1,7 @@
 import React from 'react';
 import PhoneMockup from '../assets/images/iPhone_Mockup.png';
+import { MouseParallax,ScrollParallax } from 'react-just-parallax';
+import { Scroll } from 'lucide-react';
 
 // Placeholder for the mobile device image with app UI.
 
@@ -24,18 +26,23 @@ const DemoSection = () => {
             Book a free demo
           </button>
         </div>
-
+<ScrollParallax>
         {/* Right Mobile Image */}
-<div className="flex justify-center items-center p-4 relative">
-  <img
-    src={PhoneMockup}
-    alt="Mobile App Demo"
-    className="w-64 md:w-80 lg:w-96 shadow-2xl rounded-3xl"
-  />
+        <div className="flex justify-center items-center p-4 relative">
+          
+            <img
+              src={PhoneMockup}
+              alt="Mobile App Demo"
+              className="w-64 md:w-80 lg:w-96 shadow-2xl rounded-3xl"
+            />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-blue-500/60 to-transparent pointer-events-none w-64 md:w-80 lg:w-96 mx-auto"></div>
+         
 
   {/* Overlay */}
-  <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-blue-500/60 to-transparent pointer-events-none w-64 md:w-80 lg:w-96 mx-auto"></div>
+
 </div>
+</ScrollParallax>
+
 
       </div>
     </div>

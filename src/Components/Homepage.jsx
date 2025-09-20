@@ -7,17 +7,25 @@ import Platforms from './Platforms'
 import Testimonials from './Testimonials'
 import DemoSection from './Features'
 import Footer from './Footer'
+import {ScrollParallax } from "react-just-parallax";
+
 
 const Homepage = () => {
   return (
     <div>
       <Navbar />
+      
       <Hero />
-      <Solutions/>
+
+        <Solutions />
+
       <OnboardingJourney />
       <Platforms />
       <Testimonials />
-      <DemoSection />
+
+      
+        <DemoSection />
+    
       <Footer />
     </div>
   )

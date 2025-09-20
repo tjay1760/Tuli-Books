@@ -15,6 +15,7 @@ import mastercardcard from '../assets/images/mastercard-logo.png'
 import pawaicard from '../assets/images/pawa-ai-logo.png'
 import mpesa2card from '../assets/images/M-pesa-logo 1.png'
 import flutterwavecard from '../assets/images/flutterwave-logo.png'
+import {MouseParallax, ScrollParallax } from "react-just-parallax";
 
 
 const companies = [
@@ -51,16 +52,18 @@ const bottomRow = companies.slice(companies.length - 2);
   });
   
 const Card = ({ logo, name, }) => (
-  <motion.div
-    className="w-24 h-24 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white"
-    variants={cardVariants}
-    initial="initial"
-    whileInView="whileInView"
+ 
+    <motion.div
+      className="w-24 h-24 logo-card hover:scale-110 transition-transform duration-100 flex items-center justify-center border border-gray-50 rounded-lg shadow-md bg-white"
+      variants={cardVariants}
+      initial="initial"
+      whileInView="whileInView"
     viewport={{ once: true, amount: 0.3 }}
     transition={transitionProps(Math.random() * 0.5)} // Random delay for staggered effect
   >
     <img src={logo} alt={`${name} Logo`} className="object-contain" />
   </motion.div>
+ 
 );
 
 const Platforms = () => {

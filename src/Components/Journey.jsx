@@ -5,6 +5,7 @@ import FacebookIcon from '../assets/images/facebook-logo.png';
 import SuccessImage from '../assets/images/Illustration.png'
 import BarChartImage from '../assets/images/bar-chart.png';
 import LikeImage from '../assets/images/thumbs up.png';
+import { ScrollParallax } from 'react-just-parallax';
 
 
 
@@ -105,6 +106,7 @@ const OnboardingJourney = () => {
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl p-4 md:p-0 mx-auto justify-items-center">
 
         {cardData.map((card) => (
+          <ScrollParallax>
 <motion.div
   key={card.id}
   variants={cardVariants}
@@ -128,6 +130,8 @@ const OnboardingJourney = () => {
     </p>
   </div>
 </motion.div>
+          </ScrollParallax>
+
 
         ))}
       </div>   

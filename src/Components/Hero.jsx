@@ -35,7 +35,7 @@ const Hero = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        }, 3000);
+        }, 6000);
         return () => clearInterval(interval);
     }, []);
 
@@ -43,15 +43,8 @@ const Hero = () => {
     <div className='md:flex gap-6 sm:gap-8 md:gap-6 p-4 sm:p-6 md:p-8 lg:px-10 mx-auto items-center justify-center lg:max-w-[100rem]'>
       <div className="words flex flex-col items-start justify-center gap-6 sm:gap-8 md:gap-10">
         <div className="heading text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-bold md:leading-20 text-[#071D6E]">
-          All-in-one &nbsp;
-            <ReactTyped
-            strings={texts}
-            typeSpeed={80}
-            backSpeed={80}
-            loop
-            className="inline-block text-[#0957FF]"
-          />
-          <br />
+          All-in-one
+          <span className="text-[#0066FF]"> {texts[currentIndex]} </span>
           Software
              for Individuals and Growing Businesses
         </div>

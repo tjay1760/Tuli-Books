@@ -16,7 +16,7 @@ const DemoSection = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-auto lg:max-w-[100rem]">
         {/* Left Text Content */}
         <div className="flex flex-col items-start text-center lg:text-left p-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-4xl xl:text-6xl font-extrabold mb-6 leading-tight">
             Ready to Take Control of Your Finances?
           </h1>
           <p className="text-lg mb-8 leading-relaxed opacity-90">

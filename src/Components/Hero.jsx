@@ -35,14 +35,14 @@ const Hero = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        }, 6000);
+        }, 10000);
         return () => clearInterval(interval);
     }, []);
 
   return (
     <div className='md:flex gap-6 sm:gap-8 md:gap-6 p-4 sm:p-6 md:p-8 lg:px-10 mx-auto items-center justify-center lg:max-w-[100rem]'>
       <div className="words flex flex-col items-start justify-center gap-6 sm:gap-8 md:gap-10">
-        <div className="heading text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-bold md:leading-20 text-[#071D6E]">
+        <div className="heading text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold md:leading-20 text-[#071D6E]">
           All-in-one
           <span className="text-[#0066FF]"> {texts[currentIndex]} </span>
           Software
@@ -66,7 +66,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="hero-image hidden lg:block w-7/12">
+      <div className="hero-image hidden lg:block xl:w-7/12 lg:w-6/12">
         <img src={Heroimage} alt="Hero Image"
         className='max-w-7xl'
         />

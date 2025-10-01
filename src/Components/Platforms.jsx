@@ -74,7 +74,7 @@ const Platforms = () => {
         <div className="main-grid hidden md:flex flex-col gap-24 xl:flex-row items-center">
 
             <div className="flex flex-col items-start text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-[#0957FF] mb-4 leading-tight">
+                <h1 className="text-4xl md:text-4xl xl:text-5xl font-extrabold text-[#0957FF] mb-4 leading-tight">
                     All Our Connected Platforms
                 </h1>
                 <p className="text-xl text-gray-900 mb-8 leading-relaxed font-semibold">

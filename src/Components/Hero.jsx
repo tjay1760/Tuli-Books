@@ -6,21 +6,21 @@ import { FaArrowRight } from "react-icons/fa";
 import { ReactTyped } from 'react-typed';
 import Heroimage from '../assets/images/Tuli-hero-image.png'
 const chatbotQuestions = [
-  "What are the top 5 vendors this month?",
-  "Show me the sales summary for today.",
-  "How many new customers signed up this week?",
-  "What was the highest-selling product last quarter?",
-  "Give me a breakdown of revenue by region.",
-  "Which customer made the largest purchase this month?",
-  "Show the daily transaction count for the past 7 days.",
-  "What is the average order value this year?",
-  "List the top-performing sales agents this quarter.",
-  "How many support tickets are still unresolved?",
-  "Show me a comparison between this month and last month.",
-  "What payment methods are used most frequently?",
-  "Give me the inventory status for all products.",
-  "Which marketing campaign brought the most leads?",
-  "What is the churn rate for the past 6 months?",
+  "Top 5 vendors this month?",
+  "Sales summary for today?",
+  "New customers signed up this week?",
+  "Top product last quarter?",
+  "Revenue breakdown by region?",
+  "Largest purchase this month?",
+  "Daily transactions past week?",
+  "Average order value this year?",
+  "Top sales agents this quarter?",
+  "Unresolved support tickets count?",
+  "Monthly sales comparison?",
+  "Most used payment methods?",
+  "Inventory status for products?",
+  "Best marketing campaign leads?",
+  "Churn rate past 6 months?",
 ];
 const texts = [
     "Finance",
@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <div className='md:flex gap-6 sm:gap-8 md:gap-6 p-4 sm:p-6 md:p-8 lg:px-10 mx-auto items-center justify-center lg:max-w-[100rem]'>
       <div className="words flex flex-col items-start justify-center gap-6 sm:gap-8 md:gap-10">
-        <div className="heading text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold md:leading-20 text-[#071D6E]">
+        <div className="heading text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold md:leading-12 xl:leading-16 text-[#071D6E]">
           All-in-one
           <span className="text-[#0066FF]"> {texts[currentIndex]} </span>
           Software

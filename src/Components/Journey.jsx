@@ -96,10 +96,10 @@ const OnboardingJourney = () => {
     <div className="min-h-screen bg-linear-to-b from-[#0957FF] to-[#009DFF] flex flex-col items-center justify-center py-12 md:py-24 md:mt-72 ">
       <div className="holder lg:max-w-[100rem]">
            <div className="text-center mb-12 px-4 max-w-2xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl xl:text-5xl font-bold text-white mb-2 leading-tight">
           Launch your journey
         </h1>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-4xl xl:text-5xl font-bold text-white mb-2 leading-tight">
           with Tuli books
         </h2>
       </div>

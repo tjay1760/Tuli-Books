@@ -43,7 +43,7 @@ const Solutions = () => {
   return (
     <div className='mt-12 sm:mt-16 md:mt-24 p-4 sm:p-6 md:p-8 lg:max-w-[100rem] mx-auto bg-[#F7FAFF]'>
       <div className="heading text-center mb-12 sm:mb-16">
-        <h1 className='text-4xl sm:text-5xl md:text-5xl lg:text-5xl font-bold text-[#0066FF] leading-tight'>
+        <h1 className='text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-[#0066FF] leading-tight'>
           Accounting Solutions for Every
           <br className="hidden sm:block" />
           <span className='text-[#071D6E]'>&nbsp;Business Needs</span>
